@@ -140,7 +140,6 @@ ul{
 
 .greeting-wrapper{
     display: grid;
-    border:2px dashed lightcoral;
     min-height: 10em;
     text-align: center;
     align-content: center;
@@ -165,15 +164,12 @@ ul{
 
 .nav-wrapper{
     grid-area: nav-wrapper;
-    border: 1px dashed blue;
 }
 .left-column{
     grid-area: left-column;
-    border: 1px dashed blue;
 }
 .right-column{
     grid-area: right-column;
-    border: 1px dashed blue;
 }
 
 @media screen and (max-width:1200px) {
