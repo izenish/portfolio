@@ -1,3 +1,5 @@
+/*Custom variables for custom colors*/
+
 :root{
     --mainText:black;
     --secondaryText:#4b5156;
@@ -63,6 +65,8 @@
 
 
 
+/* Actual Body starts here */
+
 html,body{
     padding: 0;
     margin: 0;
@@ -71,7 +75,8 @@ html,body{
 
 h1,h2,h3,h4,h5,h6,strong{
 color: var(--mainText);
-font-family: 'typewriter_condensed';
+font-family: 'jmh_typewriter';
+
 
 
 
@@ -80,6 +85,10 @@ font-family: 'typewriter_condensed';
 
 p,li,span,label,input,textarea{
     color:var(--secondaryText) ;
+    font-family: 'urania_czech';
+
+
+
 
 }
 
@@ -93,7 +102,10 @@ h6{font-size: 16px;}
 a{
     text-decoration: none;
     color:#17a2b8;
-    font-family: 'urania_czech';
+    font-family: 'typewriter_condensed_demi';
+
+
+
 
 }
 
@@ -106,19 +118,63 @@ ul{
     background-color: var(--mainColor);
     border-bottom:1px solid var(--borderColor) ;
     overflow: auto;
+    font-family: 'typewriter_condensed_demi';
+
 }
 
 .s2{
     background-color: var(--secondaryColor);
     border-bottom:1px solid var(--borderColor);
     overflow: auto;
+    font-family: 'typewriter_condensed_demi';
+
 }
 
 .main-container{
     width: 1200px;
     margin:0 auto;
+
 }
 
+
+
+.greeting-wrapper{
+    display: grid;
+    border:2px dashed lightcoral;
+    min-height: 10em;
+    text-align: center;
+    align-content: center;
+}
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);   
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 3em 20em;
+    grid-template-areas:
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+        ;
+
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border: 1px dashed blue;
+}
+.left-column{
+    grid-area: left-column;
+    border: 1px dashed blue;
+}
+.right-column{
+    grid-area: right-column;
+    border: 1px dashed blue;
+}
 
 @media screen and (max-width:1200px) {
     .main-container{
